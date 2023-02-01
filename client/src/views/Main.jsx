@@ -14,14 +14,14 @@ export default function Main() {
       ? -1
       : 1;
   }
-
+  
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/foods")
-      .then((res) => {
-        setFoods(res.data.sort(compareName));
-        console.log(foods);
-        setLoaded(true);
+    .get("http://localhost:8000/api/foods")
+    .then((res) => {
+      setFoods(res.data.sort(compareName));
+      console.log(foods);
+      setLoaded(true);
       })
       .catch((err) => console.error(err));
   }, [loaded]);
@@ -31,10 +31,14 @@ export default function Main() {
   };
 
   return (
-    <div>
-      <Link to={`/foods/new`} className='btn btn-sm btn-accent'>Add Food</Link>
+    <div className="flex flex-col items-center">
       {loaded && (
+      <>
+        <div className="flex gap-5">
+          <Link to={`/chowcounter/foods/new`} className='btn btn-sm btn-accent'>Add Food</Link>
+        </div>
         <FoodList foods={foods} removeFromDOM={removeFromDOM} />
+      </>
       )}
     </div>
   );

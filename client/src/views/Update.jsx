@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import FoodForm from "../components/FoodForm";
 
 export default function Update() {
@@ -40,6 +40,7 @@ export default function Update() {
 
   return (
     <div>
+      <Link to={`/`} className='btn btn-sm btn-accent w-28 mb-16'>Home</Link>
       {errors.map((err, index) => 
       <p className="text-white bg-red-500 px-3 py-1 rounded-lg mb-2 text-xs" key={index}>{err}</p>
       )}

@@ -14,15 +14,10 @@ export default function Detail() {
     .catch(err => console.error(err));
   }, [id]);
 
-  // const displayPrice = (price) => {
-  //   return price !== undefined
-  //     ? price.toFixed(2)
-  //     : '';
-  // }
-
   return(
     <div className='mt-24 text-lg text-gray-200 flex flex-col items-center'>
-      <h1 className='text-2xl font-bold mb-5 text-left'>{food.name} {food.brand.length > 0 && <span>({food.brand})</span>}</h1>
+      <Link to={`/`} className='btn btn-sm btn-accent w-28 mb-16'>Home</Link>
+      <h1 className='text-2xl font-bold mb-5 text-center'>{food.name} {food.brand.length > 0 && <span className='text-gray-500'>({food.brand})</span>}</h1>
       <div className='flex border-2 rounded-xl p-5 items-center bg-gray-800' style={{width: '31rem'}}>
         <div className='text-center w-28'>
           <p className='font-semibold'>Calories</p>
@@ -58,7 +53,7 @@ export default function Detail() {
         </div>
       </div>
       <div className='flex gap-4  mt-5'>
-        <Link to={`/foods/${id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
+        <Link to={`/chowcounter/foods/${id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
         <DeleteButton foodId={food._id} successCallback={() => navigate('/')}/>
       </div>
     </div>
