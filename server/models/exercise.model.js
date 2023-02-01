@@ -13,33 +13,14 @@ const ExerciseSchema = new mongoose.Schema(
         brand: {
             type: String,
         },
+        duration: {
+            type: Number,
+            required: [true, 'Duration is required and must be a number'],
+            min: [1, 'Duration must be at least 1 minute']
+        },
         calories: {
             type: Number,
             required: [true, 'Calorie information is required and must be a number'],
-        },
-        totalFat: {
-            type: Number,
-        },
-        saturatedFat: {
-            type: Number,
-        },
-        cholesterol: {
-            type: Number,
-        },
-        sodium: {
-            type: Number,
-        },
-        carbohydrates: {
-            type: Number,
-        },
-        fiber: {
-            type: Number,
-        },
-        sugar: {
-            type: Number,
-        },
-        protein: {
-            type: Number,
         },
     },
     { timestamps: true }
