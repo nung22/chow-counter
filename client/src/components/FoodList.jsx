@@ -6,7 +6,7 @@ export default function FoodList(props) {
   const { removeFromDOM, foods } = props;
 
   return(
-    <div className="overflow-x-auto">
+    <div className="">
       <h1 className='text-l font-semibold my-3'>We have quotes by:</h1>
       <table className="table w-96 text-center">
         <thead>
@@ -19,10 +19,10 @@ export default function FoodList(props) {
         {foods.map( (food, i) => 
         <tr key={i} className="hover">
           <th>
-            <Link to={`/foods/${food._id}`} className="link link-hover">{food.name}</Link>
+            <Link to={`/chowcounter/foods/${food._id}`} className="link link-hover">{food.name}</Link>
           </th>
           <td className='flex justify-center gap-3'>
-            <Link to={`/foods/${food._id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
+            <Link to={`/chowcounter/foods/${food._id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
             <DeleteButton foodId={food._id} successCallback={() => removeFromDOM(food._id)}/>
           </td>
         </tr>
