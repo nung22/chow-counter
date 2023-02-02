@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import FoodForm from "../components/FoodForm";
+import FoodForm from "../../components/FoodForm";
 
 export default function Create() {
   const navigate = useNavigate();

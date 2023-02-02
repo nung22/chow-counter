@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import DeleteButton from '../components/DeleteButton';
+import DeleteButton from '../../components/DeleteButton';
 
 export default function Detail() {
   const [food, setFood] = useState([]);
@@ -12,13 +12,12 @@ export default function Detail() {
     axios.get(`http://localhost:8000/api/foods/${id}`)
     .then(res => setFood(res.data))
     .catch(err => console.error(err));
-  }, [id]);
+  }, []);
 
   return(
-    <div className='mt-24 text-lg text-gray-200 flex flex-col items-center'>
-      <Link to={`/`} className='btn btn-sm btn-accent w-28 mb-16'>Home</Link>
-      <h1 className='text-2xl font-bold mb-5 text-center'>{food.name} {food.brand.length > 0 && <span className='text-gray-500'>({food.brand})</span>}</h1>
-      <div className='flex border-2 rounded-xl p-5 items-center bg-gray-800' style={{width: '31rem'}}>
+    <div className='mt-24 text-lg flex flex-col items-center'>
+      <h1 className='text-2xl font-bold mb-5 text-center'>{food.name} {food.brand.length > 0 && <span className=''>({food.brand})</span>}</h1>
+      <div className='flex border-2 rounded-xl p-5 items-center bg-base-300' style={{width: '31rem'}}>
         <div className='text-center w-28'>
           <p className='font-semibold'>Calories</p>
           <p>{food.calories} kcal</p>
