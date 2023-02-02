@@ -32,14 +32,14 @@ export default function Main() {
 
   return (
     <div className="flex flex-col items-center">
-      {loaded && (
+      {/* {loaded && (
       <>
         <div className="flex gap-5">
           <Link to={`/chowcounter/foods/new`} className='btn btn-sm btn-accent'>Add Food</Link>
         </div>
         <FoodList foods={foods} removeFromDOM={removeFromDOM} />
       </>
-      )}
+      )} */}
     </div>
   );
 }
