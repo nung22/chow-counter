@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 // imports routes file
 const { foodRouter } = require('./routes/food.routes');
+const { restaurantRouter } = require('./routes/restaurant.routes');
 // Environment vars
 const PORT = 8000;
 // invokes express
@@ -19,6 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 // Adds all the product routes with this url prepended to them.
 // If we had another model, we'd do the same with that model's routes.
 app.use('/api/foods', foodRouter)
+app.use('/api/restaurants', restaurantRouter)
+
 // runs server on specified port (must be below other code blocks)
 app.listen(PORT, () => {
   console.log(`Listening at Port ${PORT}`);
