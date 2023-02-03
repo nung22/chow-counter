@@ -49,7 +49,7 @@ const NavBar = (props) => {
           </ul>
         </div>
         <div className="flex gap-2 sm:gap-5 items-center mx-3">
-          <div className="dropdown dropdown-end">
+          {/* <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src={stockPhoto} alt="stock profile"/>
@@ -65,7 +65,7 @@ const NavBar = (props) => {
               <li><Link>Settings</Link></li>
               <li><Link>Logout</Link></li>
             </ul>
-          </div>
+          </div> */}
           <input type="checkbox" className="toggle toggle-sm toggle-warning" checked={isLightMode}
           onClick={() => {
             isLightMode
