@@ -3,8 +3,8 @@ const express = require('express');
 // imports cors module for cross-origin requests
 const cors = require('cors');
 // imports routes file
-const { foodRouter } = require('./routes/food.routes');
-const { restaurantRouter } = require('./routes/restaurant.routes');
+// const { foodRouter } = require('./routes/food.routes');
+const { externalApiRouter } = require('./routes/externalApi.routes');
 // Environment vars
 const PORT = 8000;
 // invokes express
@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Adds all the product routes with this url prepended to them.
 // If we had another model, we'd do the same with that model's routes.
-app.use('/api/foods', foodRouter)
-app.use('/api/restaurants', restaurantRouter)
+// app.use('/api/foods', foodRouter)
+app.use('/externalApi', externalApiRouter)
 
 // runs server on specified port (must be below other code blocks)
 app.listen(PORT, () => {
