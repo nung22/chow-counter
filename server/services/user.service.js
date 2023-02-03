@@ -1,10 +1,5 @@
 const { User } = require("../models/user.model");
 
-const createUser = async (data) => {
-  const user = await User.create(data);
-  return user;
-};
-
 const getAllUsers = async () => {
   const users = await User.find();
   return users;
@@ -31,7 +26,6 @@ const updateUserById = async (userId, data) => {
 };
 
 module.exports = {
-  createUser,
   getAllUsers,
   getUserById,
   deleteUserById,
