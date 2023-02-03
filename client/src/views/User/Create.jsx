@@ -1,15 +1,15 @@
 import axios from "axios";
 import React, { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import FoodForm from "../../components/FoodForm";
+import UserForm from "../../components/UserForm";
 
 export default function Create() {
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]); 
 
-  const createFood = food => {
+  const createUser = user => {
     axios
-      .post(`http://localhost:8000/api/foods/new`, food)
+      .post(`http://localhost:8000/api/users/new`, user)
       .then((res) => {
         console.log(res);
         navigate('/');
@@ -31,9 +31,9 @@ export default function Create() {
       {errors.map((err, index) => 
       <p className="text-white bg-red-500 px-3 py-1 rounded-lg mb-2 text-xs" key={index}>{err}</p>
       )}
-      <FoodForm
-        submitName="Add Food"
-        onSubmitProp={createFood}
+      <UserForm
+        submitName="Add User"
+        onSubmitProp={createUser}
         initialName=""
         initialBrand=""
         initialCalories=""

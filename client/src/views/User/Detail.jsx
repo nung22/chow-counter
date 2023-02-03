@@ -4,23 +4,23 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import DeleteButton from '../../components/DeleteButton';
 
 export default function Detail() {
-  const [food, setFood] = useState([]);
+  const [user, setUser] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/foods/${id}`)
-    .then(res => setFood(res.data))
+    axios.get(`http://localhost:8000/api/users/${id}`)
+    .then(res => setUser(res.data))
     .catch(err => console.error(err));
   }, []);
 
   return(
     <div className='mt-24 text-lg flex flex-col items-center'>
-      <h1 className='text-2xl font-bold mb-5 text-center'>{food.name} {food.brand.length > 0 && <span className=''>({food.brand})</span>}</h1>
+      <h1 className='text-2xl font-bold mb-5 text-center'>{user.name} {user.brand.length > 0 && <span className=''>({user.brand})</span>}</h1>
       <div className='flex border-2 rounded-xl p-5 items-center bg-base-300' style={{width: '31rem'}}>
         <div className='text-center w-28'>
           <p className='font-semibold'>Calories</p>
-          <p>{food.calories} kcal</p>
+          <p>{user.calories} kcal</p>
         </div>
         <div className='flex gap-4 border-x-2  px-6 py-3'>
           <div>
@@ -30,10 +30,10 @@ export default function Detail() {
             <p className='font-semibold'>Sodium</p>
           </div>
           <div>
-            <p>{food.totalFat}g</p>
-            <p>{food.saturatedFat}g</p>
-            <p>{food.cholesterol}mg</p>
-            <p>{food.sodium}mg</p>
+            <p>{user.totalFat}g</p>
+            <p>{user.saturatedFat}g</p>
+            <p>{user.cholesterol}mg</p>
+            <p>{user.sodium}mg</p>
           </div>
         </div>
         <div className='flex gap-4 pl-6'>
@@ -44,16 +44,16 @@ export default function Detail() {
             <p className='font-semibold'>Protein</p>
           </div>
           <div>
-            <p>{food.carbohydrates}g</p>
-            <p>{food.fiber}g</p>
-            <p>{food.sugar}g</p>
-            <p>{food.protein}g</p>
+            <p>{user.carbohydrates}g</p>
+            <p>{user.fiber}g</p>
+            <p>{user.sugar}g</p>
+            <p>{user.protein}g</p>
           </div>
         </div>
       </div>
       <div className='flex gap-4  mt-5'>
-        <Link to={`/chowcounter/foods/${id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
-        <DeleteButton foodId={food._id} successCallback={() => navigate('/')}/>
+        <Link to={`/chowcounter/users/${id}/edit`} className='btn btn-sm btn-outline btn-warning'>Edit</Link>
+        <DeleteButton userId={user._id} successCallback={() => navigate('/')}/>
       </div>
     </div>
   )

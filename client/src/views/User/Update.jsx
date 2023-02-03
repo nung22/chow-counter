@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import FoodForm from "../../components/FoodForm";
+import UserForm from "../../components/UserForm";
 
 export default function Update() {
   const { id } = useParams();
-  const [food, setFood] = useState({});
+  const [user, setUser] = useState({});
   const [loaded, setLoaded] = useState(false);
   const [errors, setErrors] = useState([]); 
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/foods/${id}`)
+    axios.get(`http://localhost:8000/api/users/${id}`)
       .then((res) => {
-        setFood(res.data);
-        console.log(food)
+        setUser(res.data);
+        console.log(user)
         setLoaded(true);
       });
     }, [id]);
     
-    const updateFood = food => {
+    const updateUser = user => {
       axios
-      .put(`http://localhost:8000/api/foods/${id}`, food)
+      .put(`http://localhost:8000/api/users/${id}`, user)
       .then((res) => {
         console.log(res);
         navigate('/');
@@ -45,20 +45,20 @@ export default function Update() {
       <p className="text-white bg-red-500 px-3 py-1 rounded-lg mb-2 text-xs" key={index}>{err}</p>
       )}
       {loaded && (
-        <FoodForm
-          submitName="Update Food"
-          onSubmitProp={updateFood}
-          initialName={food.name}
-          initialBrand={food.brand}
-          initialCalories={food.calories}
-          initialTotalFat={food.totalFat}
-          initialSaturatedFat={food.saturatedFat}
-          initialCholesterol={food.cholesterol}
-          initialSodium={food.sodium}
-          initialCarbohydrates={food.carbohydrates}
-          initialFiber={food.fiber}
-          initialSugar={food.sugar}
-          initialProtein={food.protein}
+        <UserForm
+          submitName="Update User"
+          onSubmitProp={updateUser}
+          initialName={user.name}
+          initialBrand={user.brand}
+          initialCalories={user.calories}
+          initialTotalFat={user.totalFat}
+          initialSaturatedFat={user.saturatedFat}
+          initialCholesterol={user.cholesterol}
+          initialSodium={user.sodium}
+          initialCarbohydrates={user.carbohydrates}
+          initialFiber={user.fiber}
+          initialSugar={user.sugar}
+          initialProtein={user.protein}
         />
       )}
     </div>
