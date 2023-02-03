@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.714720d0.css",
+    "main.js": "/static/js/main.d03303a3.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/no-restaurants-1.gif": "/static/media/no-restaurants-1.d29f3575e85373238bfd.gif",
+    "static/media/no-recipes.gif": "/static/media/no-recipes.6031217132e94e1a7329.gif",
+    "static/media/no-foods.gif": "/static/media/no-foods.06cd4a27ca0c3e20f255.gif",
+    "static/media/hero-2.jpg": "/static/media/hero-2.41c5c903267acf5a55f0.jpg",
+    "static/media/squirtle-squad.jpg": "/static/media/squirtle-squad.1303cb86dad160a05273.jpg",
+    "static/media/hero-3.jpg": "/static/media/hero-3.2b89a1e90fb32baeb0a9.jpg",
+    "static/media/hero-1.jpg": "/static/media/hero-1.68bfbc9b5a7a263d94c4.jpg",
+    "static/media/chow-counter-logo.png": "/static/media/chow-counter-logo.704d292c2ecb4cbe815b.png",
+    "index.html": "/index.html",
+    "main.714720d0.css.map": "/static/css/main.714720d0.css.map",
+    "main.d03303a3.js.map": "/static/js/main.d03303a3.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.714720d0.css",
+    "static/js/main.d03303a3.js"
+  ]
+}
