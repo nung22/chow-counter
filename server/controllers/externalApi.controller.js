@@ -12,7 +12,7 @@ const getRandomRestaurant = (req, res) => {
     &sort_by=best_match&limit=20`, 
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer 6_mHmn6zJcN_9d5MUL3yeme-og9vdv1xNHg9J5PL_qNWlYY_VzEr0UfYE5JhpJ5xT10rnmOKRf_t8CZ6w3JjmxfxYlzzoyicVq_YiAEfiOXpdTd0xDM9z3JSkevaY3Yx'
+      Authorization: process.env.YELP_API_KEY
     }
   }
   axios.request(options)
@@ -31,7 +31,7 @@ const getRandomRecipe = (req,res) => {
     url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random',
     params: {number: '1', tags: tags},
     headers: {
-      'X-RapidAPI-Key': '8ac42f2888mshc734a537dcdd340p1d6cedjsn984f0a109b3e',
+      'X-RapidAPI-Key': process.env.RAPID_API_KEY,
       'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
     }
   };
@@ -51,7 +51,7 @@ const getFoodInfo = (req,res) => {
     url: 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser',
     params: {ingr: ingredient},
     headers: {
-      'X-RapidAPI-Key': '8ac42f2888mshc734a537dcdd340p1d6cedjsn984f0a109b3e',
+      'X-RapidAPI-Key': process.env.RAPID_API_KEY,
       'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
     }
   };
