@@ -3,10 +3,10 @@
 </h1>
 
 <p align="center">
-  <a href="https://youtu.be/xXnk30QOBy4" alt="Video Tour">Take a Video Tour</a>
+    <a href="https://www.loom.com/share/25f66c1a8d5845eabe4bb5e322d4efb1" alt="Video Demo">Video Demo</a>
 </p>
 
-[![Video Tour](/Screenshots/Login.png?raw=true)](https://youtu.be/xXnk30QOBy4)
+<a href="https://www.loom.com/share/25f66c1a8d5845eabe4bb5e322d4efb1" alt="Video Demo"><img src="./screenshots/HomePageTop.png?raw=true" alt="Home Page"></a>
 
 ### _A Calorie-Tracking App with tools for discovering new restaurant and recipes_
 
@@ -20,13 +20,12 @@
 - [Technologies Used](#technologies-used)
 - [Functionality](#functionality)
 - [Design](#design)
-- [Running Locally](#running-locally)
 
 ---
 
 ## Background
 
-I do not have experience with Learning Management Systems (LMS), but a teammate had reported frequent frustration with them because they often force users to start over at the beginning instead of returning to the previous location on the learning path. We designed this LMS to have playlists making it easy for the user to find the next course they had wanted to watch whenever they finished a course.
+As someone who recently started adopting a healthier lifestyle, one action that has helped me tremendously on my journey has been becoming more aware of the foods I consume on a daily basis. I have a fair bit of experience using food databases provided by companies like MyFitnessPal and LoseIt, so naturally I decided to create my own system for looking up nutritional information to learn what running such a service entails. In a similar vein, two of my favorite hobbies include cooking and exploring new places to eat; however I frequently find myself indecisive about what to make and where to go. As such, I integrated a random recipe and restaurant generator into the app along with the aformentioned food search feature for whenever I find myself lacking in ideas or inspiration. 
 
 [Return to Table of Contents](#Table-of-Contents)
 
@@ -34,45 +33,39 @@ I do not have experience with Learning Management Systems (LMS), but a teammate 
 
 ## Features
 
-- General Features
+- Dark/Light Mode Toggle
 
-  - Login/Registration with validations
+  <img src="./screenshots/HomePageTop.png?raw=true" alt="Home Page Dark Mode" width="300">
+  <img src="./screenshots/HomePageLight.png?raw=true" alt="Home Page Light Mode" width="300">
 
-    <img src="./screenshots/Login.png?raw=true" alt="Login/Register" width="300">
+- Food Search with error on unsuccessful query
 
-  - User Profile Page
+  <img src="./screenshots/FoodSearchEmpty.png?raw=true" alt="Food Search Empty" width="300">
+  <img src="./screenshots/FoodSearch.png?raw=true" alt="Food Search" width="300">
+  <img src="./screenshots/FoodSearchError.png?raw=true" alt="Food Search Error" width="300">
 
-    <img src="./screenshots/UserProfilePage.png?raw=true" alt="Login/Register" width="300">
+- Restaurant Generator with error on unsuccessful query
 
-  - Course Library
+  <img src="./screenshots/RestaurantPickerEmpty.png?raw=true" alt="Restaurant Generator Empty" width="300">
+  <img src="./screenshots/RestaurantPicker.png?raw=true" alt="Restaurant Generator" width="300">
+  <img src="./screenshots/RestaurantPickerError.png?raw=true" alt="Restaurant Generator Error" width="300">
 
-    <img src="./screenshots/CourseLibrary.png?raw=true" alt="Login/Register" width="300">
+- Recipe Generator with error on unsuccessful query
 
-  - Individual Course Page
+  <img src="./screenshots/RecipePickerEmpty.png?raw=true" alt="Recipe Generator Empty" width="300">
+  <img src="./screenshots/RecipePickerRandom.png?raw=true" alt="Recipe Generator Random" width="300">
+  <img src="./screenshots/RecipePicker.png?raw=true" alt="Recipe Generator" width="300">
+  <img src="./screenshots/RecipePickerError.png?raw=true" alt="Recipe Generator Error" width="300">
 
-    <img src="./screenshots/IndividualCourse.png?raw=true" alt="Login/Register" width="300">
+- Responsive Web Design
 
-  - Multiple Choice Quiz
-
-    <img src="./screenshots/CourseQuiz.png?raw=true" alt="Login/Register" width="300">
-
-- Admin Features
-
-  - Create a Course
-
-    <img src="./screenshots/CreateCourse.png?raw=true" alt="Login/Register" width="300">
-
-  - Create or Edit a Quiz Menu
-
-    <img src="./screenshots/ManageQuizzes.png?raw=true" alt="Login/Register" width="300">
-
-  - Create a Quiz
-
-    <img src="./screenshots/CreateQuiz.png?raw=true" alt="Login/Register" width="300">
-
-  - Edit a Quiz
-
-    <img src="./screenshots/EditQuiz.png?raw=true" alt="Login/Register" width="300">
+  <img src="./screenshots/HomePageMobile.png?raw=true" alt="Home Page Top Mobile" height="300" width="148">
+  <img src="./screenshots/HomePageBottomMobile.png?raw=true" alt="Home Page Bottom Mobile" height="300" width="148">
+  <img src="./screenshots/RestaurantPickerMobile.png?raw=true" alt="Restaurant Picker Mobile" height="300" width="148">
+  <img src="./screenshots/RestaurantPickerLightMobile.png?raw=true" alt="Restaurant Picker Light Mode Mobile" height="300" width="148">
+  <img src="./screenshots/RecipePickerMobile.png?raw=true" alt="Recipe Picker Mobile" height="300" width="148">
+  <img src="./screenshots/FoodSearchMobile.png?raw=true" alt="Food Search Mobile" height="300" width="148">
+  <img src="./screenshots/FoodSearchErrorMobile.png?raw=true" alt="Food Search Error Mobile" height="300" width="148">
 
 [Return to Table of Contents](#Table-of-Contents)
 
@@ -80,12 +73,11 @@ I do not have experience with Learning Management Systems (LMS), but a teammate 
 
 ## Technologies Used
 
-- Python Django
-- HTML, CSS, and Bootstrap
-- AJAX, jQuery, and RESTful routing
-- SQLite3
-- HTML and Bootstrap validations as well as server-side validations and Bcrypt for secure login
-- YouTube API
+- Javascript, React, Node.js, and Express
+- HTML, CSS, Tailwind, and DaisyUI
+- AJAX, Axios, and RESTful routing
+- MongoDB and Mongoose
+- Yelp API, Spoonacular API, and Edamam API
 
 [Return to Table of Contents](#Table-of-Contents)
 
@@ -93,7 +85,7 @@ I do not have experience with Learning Management Systems (LMS), but a teammate 
 
 ## Functionality
 
-Upon logging in, the user is taken to their profile page. It lists any playlists the user has created. When a playlist is selected, the related courses are displayed in two categories: courses already taken and courses that could be taken. If a course has already been taken, the user's quiz score for it is displayed. Selecting a course takes the user to that course's page.
+Upon visiting the site, the user is taken to a landing page
 
 On an individual course's page, the user can read the description imported through YouTube's API. In case the user arrived on the course page from the course library, there is an option for adding the course to one of their playlists. They may attempt the quiz before and/or after watching the video. When a video ends, a modal provides the option to add the course to one of the user's existing playlists or for a new list to be created with this course, and then the user is taken to the quiz page for that course.
 
@@ -113,108 +105,13 @@ Users who have administrative permission may create or edit a quiz for a course.
 
 ## Design
 
-The navbar remains the same throughout the site, allowing easy navigation. Users with administrative permission see two additional links on their navbar for creating courses and quizzes.
+The navbar remains the same throughout the site, allowing easy navigation. The site brand on the left of the bar can be pressed at any time to bring the user back to the home page, while the links on the right side navigate to the two generators and the food search feature. On the far right end, a dark/light mode toggle allows users to switch the theme of the site to whichever color scheme they prefer.
 
-When a course has been added to a user's playlist, the user is returned to the course library to select more courses.
-After watching a course, the user is prompted to add the course to a playlist if it isn't on one already and then prompted to take the quiz.
-Users may add courses to more than one playlist.
+The 'Get Started' button at the top of the home page auto-scrolls the user down to buttons that link to the site's various features. A 'Back to Top' button at the bottom of the home page allows users to return to the landing screen if they desire.
 
 When a user does poorly on a quiz, they are returned to the individual course page so they can watch the video again.
 When a user does well on a quiz, they are returned to their profile page for easy access to their playlists to continue learning.
 
 Courses are not added to the course library until a quiz had been created for them.
-
-[Return to Table of Contents](#Table-of-Contents)
-
----
-
-## Running Locally
-
-These steps work on Windows and assume you have Python
-
-1. Create virtual environment
-   ```
-   python -m venv name
-   ```
-   where name is whatever you want to call the environment
-2. Activate the virtual environment
-   ```
-   call name\Scripts\activate
-   ```
-   where name is the name of the virtual environment you created
-3. Clone this repository
-   ```
-   git clone https://github.com/Purposefully/ChowCounter.git
-   ```
-4. Move into the repository
-   ```
-   cd ChowCounter
-   ```
-5. Install the dependencies
-   ```
-   pip install -r requirements.txt
-   ```
-6. Move into the ChowCounter app
-   ```
-   cd ChowCounter
-   ```
-7. Get a random secret key. Using https://miniwebtool.com/django-secret-key-generator/ is one option.
-
-8. Create a secrets.py file and include a secret key
-   ```
-   notepad secrets.py
-   ```
-   Choose yes to create the file.
-   Then type the following into the file. Save.
-   You can leave notepad open since you will add another key in the next step.
-   ```
-   secret='paste secret key here'
-   ```
-9. Get a YouTube API key
-   https://developers.google.com/youtube/v3/getting-started
-
-   In the secrets.py file, add:
-
-   ```
-   google_api_key = 'paste YouTube API key here'
-   ```
-
-   Save and close.
-
-10. Move out of the app
-
-    ```
-    cd..
-    ```
-
-11. Migrate
-    ```
-    python manage.py migrate
-    ```
-12. Run a local server
-    ```
-    python manage.py runserver
-    ```
-13. If you want to be able to assign administrative permission to a user, you will need to create a superuser.
-    ```
-    python manage.py createsuperuser
-    ```
-    Follow the prompts to enter a username, email (optional), and password.
-14. Open browser
-    ```
-    localhost:8000
-    ```
-15. If you want to give administrative permission to a user, first register a user in the app.
-    Next, go to
-
-    ```
-    localhost:8000/admin
-    ```
-
-    Select Users from the LMS_APP menu (NOT the Authentication and Authorization menu).
-
-    For User level, type: admin
-
-    Click save
 
 [Return to Table of Contents](#Table-of-Contents)
