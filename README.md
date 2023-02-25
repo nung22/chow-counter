@@ -3,10 +3,10 @@
 </h1>
 
 <p align="center">
-    <a href="https://www.loom.com/share/25f66c1a8d5845eabe4bb5e322d4efb1" alt="Video Demo">Video Demo</a>
+    <a href="https://www.loom.com/share/20fdacf1411149938cf3b8f8b0f2cfd2" alt="Video Demo">Video Demo</a>
 </p>
 
-<a href="https://www.loom.com/share/25f66c1a8d5845eabe4bb5e322d4efb1" alt="Video Demo"><img src="./screenshots/HomePageTop.png?raw=true" alt="Home Page"></a>
+<a href="https://www.loom.com/share/20fdacf1411149938cf3b8f8b0f2cfd2" alt="Video Demo"><img src="./screenshots/HomePageTop.png?raw=true" alt="Home Page"></a>
 
 ### _A Calorie-Tracking App with tools for discovering new restaurant and recipes_
 
@@ -25,7 +25,7 @@
 
 ## Background
 
-As someone who recently started adopting a healthier lifestyle, one action that has helped me tremendously on my journey has been becoming more aware of the foods I consume on a daily basis. I have a fair bit of experience using food databases provided by companies like MyFitnessPal and LoseIt, so naturally I decided to create my own system for looking up nutritional information to learn what running such a service entails. In a similar vein, two of my favorite hobbies include cooking and exploring new places to eat; however I frequently find myself indecisive about what to make and where to go. As such, I integrated a random recipe and restaurant generator into the app along with the aformentioned food search feature for whenever I find myself lacking in ideas or inspiration. 
+In recent years, I have started adopting healthier lifestyle habits and something that has helped me tremendously on this journey has been becoming more aware of the foods I consume on a daily basis. I have a fair bit of experience using food databases provided by companies like MyFitnessPal and LoseIt, so naturally I decided to create my own system for looking up nutritional information to learn what running such a service entails. In a similar vein, two of my favorite hobbies include cooking and exploring new places to eat; however I frequently find myself indecisive about what to make and where to go. As such, I integrated a random recipe and restaurant generator into the app along with the aformentioned food search feature for whenever I find myself lacking in ideas or inspiration. 
 
 [Return to Table of Contents](#Table-of-Contents)
 
