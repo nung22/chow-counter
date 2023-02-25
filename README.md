@@ -76,7 +76,6 @@ In recent years, I have started adopting healthier lifestyle habits and somethin
 - Javascript, React, Node.js, and Express
 - HTML, CSS, Tailwind, and DaisyUI
 - AJAX, Axios, and RESTful routing
-- MongoDB and Mongoose
 - Yelp API, Spoonacular API, and Edamam API
 
 [Return to Table of Contents](#Table-of-Contents)
