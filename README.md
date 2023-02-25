@@ -85,19 +85,15 @@ As someone who recently started adopting a healthier lifestyle, one action that 
 
 ## Functionality
 
-Upon visiting the site, the user is taken to a landing page
+Upon visiting the site, the user is taken to a landing page where they can access the site's features via links on the navbar or the approriate buttons on the home page hero messages. 
 
-On an individual course's page, the user can read the description imported through YouTube's API. In case the user arrived on the course page from the course library, there is an option for adding the course to one of their playlists. They may attempt the quiz before and/or after watching the video. When a video ends, a modal provides the option to add the course to one of the user's existing playlists or for a new list to be created with this course, and then the user is taken to the quiz page for that course.
+To generate a random restaurant the user must specify a zip code, type of cuisine, price point (between '$' and '$$$$'), and maximum travel radius (between 1 and 25 miles). Upon a successful search, a card will be displayed with the restaurant's name, price point, estimated travel distance, categories, featured picture, address, phone number, and rating out of 5 stars, as well as a button that navigates to its corresponding Yelp page.
 
-The quizzes are five multiple choice questions. The questions and answer choices are shuffled each time the quiz is displayed. Each quiz is immediately scored and results are displayed for the user.
+To generate a random recipe the user can either pick a totally random recipe by submitting with no parameters selected, or choose to refine their search by specifying a cuisine, particular diet, dietary intolerance, and/or dish type. Upon a successful search, a card will be displayed with the dish's name, relevant tags, picture, prep time, and serving size, as well as a button that navigates to a page with the rest of the recipe info.
 
-The course library lists all the courses with quizzes that have been entered into the ChowCounter app by an administrator. There is a search feature to faciliate locating desired courses. Selecting a course takes the user to the individual course's page.
+To look up a food's nutritional information the user only needs to type in its name. Upon a successful search, a card will be displayed with the food's name, picture, calories, protein, fat, carbs, and fiber, as well as a button that navigates to a page containing various recipes in which it is an ingredient.
 
-In order to give administrative permission to a user, a superuser needs to be created so that the Django Admin page can be accessed. Then, a user from the LMS_APP may be selected and "admin" entered as the User Level for that user.
-
-Users who have administrative permission may create a course by pasting in the YouTube url for that video on the create a course page. The course will not appear in the course library, however, until a quiz has been created for it.
-
-Users who have administrative permission may create or edit a quiz for a course. For development and demo purposes, one option is a lorem ipsum quiz which automatically fills in random text for the questions and answers. For real use purposes, another option is to actually create an appropriate quiz. An administrator may write 5 questions and supply three incorrect and one correct answer for each question. The edit quiz option populates with the current questions and answers and allows an administrator to modify them.
+For any of the site's tools, if no results are found using the search parameters provided, a custom error card will pop up asking the user to try again with a different query. 
 
 [Return to Table of Contents](#Table-of-Contents)
 
@@ -107,11 +103,10 @@ Users who have administrative permission may create or edit a quiz for a course.
 
 The navbar remains the same throughout the site, allowing easy navigation. The site brand on the left of the bar can be pressed at any time to bring the user back to the home page, while the links on the right side navigate to the two generators and the food search feature. On the far right end, a dark/light mode toggle allows users to switch the theme of the site to whichever color scheme they prefer.
 
-The 'Get Started' button at the top of the home page auto-scrolls the user down to buttons that link to the site's various features. A 'Back to Top' button at the bottom of the home page allows users to return to the landing screen if they desire.
+The 'Get Started' button at the top of the home page auto-scrolls the user down to buttons that navigate to the site's various features. A 'Back to Top' button at the bottom of the home page allows users to return to the landing screen if they desire.
 
-When a user does poorly on a quiz, they are returned to the individual course page so they can watch the video again.
-When a user does well on a quiz, they are returned to their profile page for easy access to their playlists to continue learning.
+Query parameters for the restaurant and recipe generators are saved after each search so the user can press 'Generate' to randomly look up another item that meets their previous conditions. The input for the food search is cleared after each submission to let users look up another food of their choosing.
 
-Courses are not added to the course library until a quiz had been created for them.
+Responsive web design was implemented to accomodate screens of all sizes so when the width falls below 1024px, feature links on the navbar placed into a collapsible menu to the left of the site brand. Additionaly, elements on the landing page are resized and forms are stacked on top of result/error cards at smaller screen widths.
 
 [Return to Table of Contents](#Table-of-Contents)
