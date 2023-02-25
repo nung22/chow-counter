@@ -74,7 +74,7 @@ export default function FoodSearch() {
               </div>
             </div>
 
-            <a href={`https://www.edamam.com/recipes/${foodInfo.label}`} target="_blank" rel="noopener noreferrer" className="btn btn-secondary text-lg">View Recipes</a>
+            <a href={`https://www.edamam.com/results/recipes/?search=${foodInfo.label}`} target="_blank" rel="noopener noreferrer" className="btn btn-secondary text-lg">View Recipes</a>
           </div>
         }
         {noResults &&
