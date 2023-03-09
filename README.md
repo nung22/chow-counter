@@ -3,6 +3,7 @@
 </h1>
 
 <p align="center">
+    <a href="http://54.201.41.80/chowcounter" alt="Live Demo">Live</a> | 
     <a href="https://www.loom.com/share/20fdacf1411149938cf3b8f8b0f2cfd2" alt="Video Demo">Video Demo</a>
 </p>
 
