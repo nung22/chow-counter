@@ -7,6 +7,10 @@
     <a href="https://www.loom.com/share/20fdacf1411149938cf3b8f8b0f2cfd2" alt="Video Demo">Video Demo</a>
 </p>
 
+<p align="center">
+  <em>Disclaimer: Not all live links may be working at the moment, feel free to reach out to me if that's the case!</em>
+</p>
+
 <a href="https://www.loom.com/share/20fdacf1411149938cf3b8f8b0f2cfd2" alt="Video Demo"><img src="./screenshots/HomePageTop.png?raw=true" alt="Home Page"></a>
 
 ### _A Calorie-Tracking App with tools for discovering new restaurant and recipes_
